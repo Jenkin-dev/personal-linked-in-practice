@@ -17,9 +17,22 @@ const Home = () => {
             width: "auto",
             borderRadius: 5,
             marginTop: 10,
-          }} onPress={() => {router.push("../index")}}
+          }} onPress={() => {router.back()}}
         >
           <Text style={{ color: "white" }}>Click Me to return to index</Text>
+        </Pressable>
+
+
+        <Pressable
+          style={{
+            padding: 10,
+            backgroundColor: "blue",
+            width: "auto",
+            borderRadius: 5,
+            marginTop: 10,
+          }} onPress={() => {router.push("../(home)/newscreen")}}
+        >
+          <Text style={{ color: "white" }}>Click Me</Text>
         </Pressable>
       </View>
     </SafeAreaView>
