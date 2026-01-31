@@ -19,7 +19,6 @@ import Postcontent from "../components/postcontent";
 // import BottomTab from "../components/bottomtab";
 import Noimagepost from "../components/noimagepost";
 
-
 export default function Index() {
   const [theme, setTheme] = useState(false); //false for light mode , true for dark mode
   const styles = StyleSheet.create({
@@ -47,13 +46,24 @@ export default function Index() {
 
   return (
     <SafeAreaView style={styles.homepage}>
-      <MaterialCommunityIcons
-        name="theme-light-dark"
-        size={24}
-        color={theme ? "white" : "black"}
-        style={{ alignSelf: "flex-end", paddingBottom: 10 }}
-        onPress={() => setTheme(!theme)}
-      />
+      <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+        <Pressable>
+          <MaterialCommunityIcons
+            name="home"
+            size={24}
+            color={theme ? "white" : "turquoise"}
+            style={{ alignSelf: "flex-start", paddingBottom: 10 }}
+            onPress={() => router.push("./home")}
+          />
+        </Pressable>
+        <MaterialCommunityIcons
+          name="theme-light-dark"
+          size={24}
+          color={theme ? "white" : "black"}
+          style={{ alignSelf: "flex-end", paddingBottom: 10 }}
+          onPress={() => setTheme(!theme)}
+        />
+      </View>
       <View style={styles.topbar}>
         <Image
           style={{ width: 35, height: 35, borderRadius: 25 }}
@@ -280,12 +290,12 @@ export default function Index() {
       </ScrollView>
 
       <Pressable
-        style={{ height: 60, backgroundColor: "red" }}
+        style={{backgroundColor: "red", height: 40, marginTop: 10, paddingHorizontal: 10, justifyContent: "center", alignItems: "center", borderRadius: 20}}
         onPress={() => {
           router.push("./(tabs)/home");
         }}
       >
-        <Text>Signup</Text>
+        <Text>Move to tabs</Text>
       </Pressable>
       {/* <BottomTab/> */}
     </SafeAreaView>

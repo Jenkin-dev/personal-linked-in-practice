@@ -1,11 +1,26 @@
 import { SafeAreaView } from "react-native-safe-area-context";
-import { View, Text } from "react-native";
+import { View, Text, Pressable } from "react-native";
+// import Ionicons from "@expo/vector-icons/Ionicons";
+import { router } from "expo-router";
 
 const Home = () => {
   return (
-    <SafeAreaView>
-      <View>
+    <SafeAreaView
+      style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
+    >
+      <View style={{ justifyContent: "center", alignItems: "center" }}>
         <Text>Welcome to the home screen</Text>
+        <Pressable
+          style={{
+            padding: 10,
+            backgroundColor: "blue",
+            width: "auto",
+            borderRadius: 5,
+            marginTop: 10,
+          }} onPress={() => {router.push("./index")}}
+        >
+          <Text style={{ color: "white" }}>Click Me to return to index</Text>
+        </Pressable>
       </View>
     </SafeAreaView>
   );

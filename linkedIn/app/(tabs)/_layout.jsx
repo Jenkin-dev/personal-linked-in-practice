@@ -8,7 +8,22 @@ const TabsLayout = () => {
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: "cyan",
+
         tabBarInactiveTintColor: "gray",
+
+        tabBarStyle: {
+          backgroundColor: "navy",
+          height: 60,
+          marginHorizontal: "10%",
+          // marginVertical: 20,
+          borderRadius: 25,
+          justifyContent: "center",
+          alignItems: "center",
+          position: "absolute",
+          bottom: "1%",
+        },
+
+        tabBarIconStyle: { marginTop: 5 },
       }}
     >
       <Tabs.Screen
@@ -20,13 +35,7 @@ const TabsLayout = () => {
           ),
         }}
       />
-      {/* <Tabs.Screen
-        name="network"
-        options={{
-          title: "Network",
-          tabBarIcon: () => <Entypo name="users" size={24} color="black" />,
-        }}
-      /> */}
+
       <Tabs.Screen
         name="post"
         options={{
@@ -52,6 +61,14 @@ const TabsLayout = () => {
           tabBarIcon: ({ color }) => (
             <Ionicons name="briefcase" size={24} color={color} />
           ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="network"
+        options={{
+          title: "Network",
+          tabBarIcon: ({ color }) => <Entypo name="users" size={24} color={color} />,
         }}
       />
     </Tabs>
