@@ -17,7 +17,7 @@ const Home = () => {
             width: "auto",
             borderRadius: 5,
             marginTop: 10,
-          }} onPress={() => {router.push("./index")}}
+          }} onPress={() => {router.push("../index")}}
         >
           <Text style={{ color: "white" }}>Click Me to return to index</Text>
         </Pressable>
