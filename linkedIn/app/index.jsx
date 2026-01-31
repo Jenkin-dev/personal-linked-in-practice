@@ -16,7 +16,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import PostHead from "../components/posthead";
 import Postcontent from "../components/postcontent";
-import BottomTab from "../components/bottomtab";
+// import BottomTab from "../components/bottomtab";
 import Noimagepost from "../components/noimagepost";
 
 
