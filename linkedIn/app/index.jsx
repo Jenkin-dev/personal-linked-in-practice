@@ -234,9 +234,9 @@ export default function Index() {
 
         <View style={styles.post}>
           <PostHead
+            Username={"Undefined User"}
             theme={theme}
             Profilepicture={require("../assets/images/IMG-20251118-WA0021.jpg")}
-            Username={"Undefined User"}
             Details={"Anonymous user "}
             days={"10y"}
           />
@@ -252,9 +252,9 @@ export default function Index() {
 
         <View style={styles.post}>
           <PostHead
+            Username={"Christopher Olanrewaju"}
             theme={theme}
             Profilepicture={require("../assets/images/IMG-20251118-WA0015.jpg")}
-            Username={"Christopher Olanrewaju"}
             Details={"Junior mobile dev"}
             days={"3min"}
           />
@@ -271,9 +271,9 @@ export default function Index() {
 
         <View style={styles.post}>
           <PostHead
+            Username={"J.Chris"}
             theme={theme}
             Profilepicture={require("../assets/images/IMG_20251103_174220_170.jpg")}
-            Username={"J.Chris"}
             Details={"Computer science student"}
             days={"3y"}
           />
@@ -290,7 +290,15 @@ export default function Index() {
       </ScrollView>
 
       <Pressable
-        style={{backgroundColor: "red", height: 40, marginTop: 10, paddingHorizontal: 10, justifyContent: "center", alignItems: "center", borderRadius: 20}}
+        style={{
+          backgroundColor: "red",
+          height: 40,
+          marginTop: 10,
+          paddingHorizontal: 10,
+          justifyContent: "center",
+          alignItems: "center",
+          borderRadius: 20,
+        }}
         onPress={() => {
           router.push("./(tabs)/home");
         }}

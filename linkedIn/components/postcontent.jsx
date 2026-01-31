@@ -12,17 +12,17 @@ const Postcontent = ({
   theme,
 }) => {
   const [readMore, setReadMore] = useState(false);
-  const [width, height] = [
-    Image.resolveAssetSource(contentpost).width,
-    Image.resolveAssetSource(contentpost).height,
-  ];
+  // const [width, height] = [
+  //   Image.resolveAssetSource(contentpost).width,
+  //   Image.resolveAssetSource(contentpost).height,
+  // ];
   const [liked, setLiked] = useState(false);
   const [commented, setCommented] = useState(false);
   const [reposted, setReposted] = useState(false);
   const [sent, setSent] = useState(false);
 
   const textcolor = theme ? "white" : "black";
-  const dynamicRatio = width / height;
+  // const dynamicRatio = width / height;
   return (
     <View>
       {/* <PostHead /> */}
@@ -36,12 +36,20 @@ const Postcontent = ({
         >
           {content}
         </Text>
-        <Text style={{ color: "grey", fontWeight: 600 }}>
+        <Text
+          style={{ color: "grey", fontWeight: 600 }}
+          onPress={() => setReadMore(!readMore)}
+        >
           {readMore ? "...see less" : " ...see more"}
         </Text>
 
         <Image
-          style={[styles.image, { aspectRatio: dynamicRatio }]}
+          style={[
+            styles.image,
+            {
+              // aspectRatio: dynamicRatio
+            },
+          ]}
           source={contentpost}
         />
       </View>

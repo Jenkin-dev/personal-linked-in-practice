@@ -18,7 +18,7 @@ const TabsLayout = () => {
           // marginVertical: 20,
           borderRadius: 25,
           justifyContent: "center",
-          alignItems: "center",
+          // alignItems: "center",
           position: "absolute",
           bottom: "1%",
         },
