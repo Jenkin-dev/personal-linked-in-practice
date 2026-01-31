@@ -3,9 +3,9 @@ import { View, Text } from "react-native";
 
 const Post = () => {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <View>
-        <Text>Welcome to the Post screen</Text>
+        <Text style={{fontSize: 30, textAlign: 'center'}}>Welcome to the Post screen</Text>
       </View>
     </SafeAreaView>
   );

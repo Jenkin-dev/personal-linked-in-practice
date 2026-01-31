@@ -3,9 +3,9 @@ import { View, Text } from "react-native";
 
 const Jobs = () => {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <View>
-        <Text>Welcome to the Jobs screen</Text>
+        <Text style={{fontSize: 30, textAlign: 'center'}}>Welcome to the Jobs screen</Text>
       </View>
     </SafeAreaView>
   );
