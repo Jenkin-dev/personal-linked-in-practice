@@ -8,7 +8,7 @@ import {
   StyleSheet,
   Pressable,
 } from "react-native";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { router } from "expo-router";
 
 import { Ionicons } from "@expo/vector-icons"; //for the dropdown icon
@@ -43,6 +43,28 @@ export default function Index() {
       marginBottom: 10,
     },
   });
+
+  console.log("hello world from compent");
+
+
+
+
+  useEffect(() => {
+    const options = {
+      method: "GET",
+      headers: {
+        "x-rapidapi-key": "0a19d562e4mshd16a68a2971326ep1e69f9jsn164743776f53",
+        "x-rapidapi-host": "imdb236.p.rapidapi.com",
+      },
+    };
+
+    fetch("https://imdb236.p.rapidapi.com/api/imdb/top250-movies", {
+
+    });
+  }, []);
+
+
+
 
   return (
     <SafeAreaView style={styles.homepage}>

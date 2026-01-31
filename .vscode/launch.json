@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug in Exponent",
+      "type": "reactnative",
+      "request": "launch",
+      "platform": "expoweb",
+      "cwd": "${C:\\Users\\USER\\Documents\\GitHub\\personal-linked-in-practice\\linkedIn}"
+    }
+  ]
+}
